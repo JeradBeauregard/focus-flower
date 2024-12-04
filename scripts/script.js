@@ -71,14 +71,26 @@ formhandle6.onsubmit = processForm6;
 formhandle7.onsubmit = processForm7;
 formhandle8.onsubmit = processForm8;
 
+// disables inputs until previous input is used
+
+formhandle2.input2.disabled = true;
+formhandle3.input3.disabled = true;
+formhandle4.input4.disabled = true;
+formhandle5.input5.disabled = true;
+formhandle6.input6.disabled = true;
+formhandle7.input7.disabled = true;
+formhandle8.input8.disabled = true;
+
 // form process,  functions add relevant inputs to the flower
+
+
 
 function processForm1(){
     
     var outputvalue1 = formhandle1.input1.value;
     console.log(outputvalue1);
     output1.innerHTML = outputvalue1;
-
+    formhandle2.input2.disabled = false;
     formhandle2.input2.focus();
 
     return false
@@ -89,6 +101,7 @@ function processForm2(){
     var outputvalue2 = formhandle2.input2.value;
     console.log(outputvalue2);
     output2.innerHTML = outputvalue2;
+    formhandle3.input3.disabled = false;
 
     formhandle3.input3.focus();
 
@@ -99,7 +112,7 @@ function processForm3(){
     var outputvalue3 = formhandle3.input3.value;
     console.log(outputvalue3);
     output3.innerHTML = outputvalue3;
-
+    formhandle4.input4.disabled = false;
     formhandle4.input4.focus();
 
     return false
@@ -109,7 +122,7 @@ function processForm4(){
     var outputvalue4 = formhandle4.input4.value;
     console.log(outputvalue4);
     output4.innerHTML = outputvalue4;
-
+    formhandle5.input5.disabled = false;
     formhandle5.input5.focus();
 
     return false
@@ -119,7 +132,7 @@ function processForm5(){
     var outputvalue5 = formhandle5.input5.value;
     console.log(outputvalue5);
     output5.innerHTML = outputvalue5;
-
+    formhandle6.input6.disabled = false;
     formhandle6.input6.focus();
 
     return false
@@ -129,7 +142,7 @@ function processForm6(){
     var outputvalue6 = formhandle6.input6.value;
     console.log(outputvalue6);
     output6.innerHTML = outputvalue6;
-
+    formhandle7.input7.disabled = false;
     formhandle7.input7.focus();
 
     return false
@@ -139,7 +152,7 @@ function processForm7(){
     var outputvalue7 = formhandle7.input7.value;
     console.log(outputvalue7);
     output7.innerHTML = outputvalue7;
-
+    formhandle8.input8.disabled = false;
     formhandle8.input8.focus();
 
     return false
@@ -150,7 +163,7 @@ function processForm8(){
     var outputvalue8 = formhandle8.input8.value;
     console.log(outputvalue8);
     output8.innerHTML = outputvalue8;
-
+    
     formhandle1.input1.focus();
 
     return false
