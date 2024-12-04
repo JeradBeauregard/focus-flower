@@ -1,18 +1,14 @@
 window.onload = function(){
 
-// okay here is my thoughts on how this could work
-// each input is its own form
-// each time enter is hit the form is submitted
-// flower inner html is updated
-// current input becomes disabled
-// focus goes to the next form input
 
 // create page
 
-var formhandle0 = document.forms.createFlower;
+// form handle for create page input
 
+var formhandle0 = document.forms.createFlower;
 formhandle0.onsubmit = newFlower;
 
+// function clears create page and reveals main page
 function newFlower(){
 
     var createContainer = document.getElementById("createContainer");
@@ -75,7 +71,7 @@ formhandle6.onsubmit = processForm6;
 formhandle7.onsubmit = processForm7;
 formhandle8.onsubmit = processForm8;
 
-// form process functions
+// form process,  functions add relevant inputs to the flower
 
 function processForm1(){
     
@@ -163,16 +159,22 @@ function processForm8(){
 
 // menu functionality
 
-// clear 
+// clear button
+
+// document variable and button event handler
 var clearButton = document.getElementById("clear");
 clearButton.onclick = clearFlowerConfirm;
 
-function clearFlowerConfirm(){
+//confirm screen function
 
+function clearFlowerConfirm(){
+    closeInstructions();
     openConfirm();
+    createButton.className = "navIcon";
 
     var confirm = document.getElementById("confirm");
     var cancel = document.getElementById("cancel");
+    clearButton.className = "navSelected";
 
     confirm.onclick = function(){
 
@@ -184,7 +186,7 @@ function clearFlowerConfirm(){
     cancel.onclick = function(){ closeConfirm();}
 }
 
-
+// function that clears all values
 
 function clearFlower(){
 
@@ -215,16 +217,20 @@ function clearFlower(){
     formhandle8.input8.value = "";
     output8.innerHTML = "";
 
+    clearButton.className = "navIcon";
 }
 
 // create
 
+// document variable and button event handler
 var createButton = document.getElementById("create");
-
 createButton.onclick = createNewConfirm;
 
+// confirm screen function
 function createNewConfirm(){
-
+        closeInstructions();
+        createButton.className = "navSelected";
+        clearButton.className = "navIcon";
         openConfirm();
 
         var confirm = document.getElementById("confirm");
@@ -234,14 +240,14 @@ function createNewConfirm(){
 
             closeConfirm();
             createNew();
-
+            createButton.className = "navIcon";
         }
 
         cancel.onclick = function(){ closeConfirm();}
 
 
 }
-
+// function clears all values, hides the main screen, reveals the create screen
 function createNew(){
 
     clearFlower();
@@ -255,11 +261,11 @@ function createNew(){
 
 // instructions
 
+// document variables
 var instructionButton = document.getElementById("instructions");
 var instructionPanel = document.getElementById("instructionPanel");
-
-
 var instructionCloseButton = document.getElementById("closeInstructions");
+// event handler
 instructionCloseButton.onclick = closeInstructions;
 
 var instructionStatus = false; // false is closed, true is open
@@ -269,22 +275,23 @@ var instructionStatus = false; // false is closed, true is open
  instructionButton.onclick = instructionToggle;
 
 
-
+// open function
 function openInstructions(){
-
+    closeConfirm();
     instructionPanel.style.display = "flex";
+    instructionButton.classList = "navSelected";
     
     instructionStatus = true;
     console.log(instructionStatus);
 }
-
+// close function
 function closeInstructions(){
 
     instructionPanel.style.display = "none";
-
+    instructionButton.classList = "navIcon";
     instructionStatus = false;
 }
-
+// function handles open/close functions
 function instructionToggle(){
 
        if(instructionStatus){
@@ -297,11 +304,11 @@ function instructionToggle(){
 }
 
 // confirm message function
-
+// document variable
 var confirmBox = document.getElementById("confirmBox");
 var confirmBoxStatus = false; // false is closed true is open
 
-
+// open function
 
 function openConfirm(){
 
@@ -310,10 +317,13 @@ confirmBoxStatus = true;
 
 }
 
+// close function
 function closeConfirm(){
 
    confirmBox.style.display = "none";
     confirmBoxStatus = false;
+    clearButton.className = "navIcon";
+    createButton.className = "navIcon";
 }
 
 
