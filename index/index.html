@@ -26,6 +26,7 @@
             <h3>Welcome to focus flower. Please enter your starting thought below.</h3>
             <form name="createFlower" id="createFlower">
                 <input name="input0" id="input0" class="input">
+                <p id="input0Empty">Input cannot be empty. Please enter your starting thought.</p>
                 <button type="submit" id="createButton" class="navIcon">Begin</button>
             </form>
         </section>
@@ -54,7 +55,7 @@
         </section>
         <section id="inputContainer">
             <form name="flowerform1" >
-                <div><input name="input1" id="input1" class="input"></div>
+                <div><input name="input1" id="input1" class="input" placeholder="Enter your next thought here..."></div>
                 <button type="submit" class="hiddenButton"></button>
             </form> 
             <form name="flowerform2" >
@@ -86,22 +87,19 @@
                 <button type="submit" class="hiddenButton"></button>
             </form>
         </section>
-        <nav id="navContainer">
-            <a href="#"><div id="menu" class="navIcon">Menu</div></a>
-            <a href="#"><div id="create" class="navIcon">Create</div></a>
-            <a href="#"><div id="clear" class="navIcon">Clear</div></a>
-            <a href="#"><div id="save" class="navIcon">Save</div></a>
-            <a href="#"><div id="instructions" class="navIcon">Instructions</div></a>
-            <a href="#"><div id="close" class="navIcon">x</div></a>
-        </nav>
+        <div id="navContainer">
+            <div id="create" class="navIcon">Create</div>
+            <div id="clear" class="navIcon">Clear</div>
+            <div id="save" class="navIcon">Save</div>
+            <div id="instructions" class="navIcon">Instructions</div></a>
+        </div>
         </main>
     </div>
     <div id="instructionPanel">
         <div id="instructionHeader">
             <h3>Instructions</h3>
-            <div id="closeInstructions">x</div>
+            <div id="closeInstructions">Close</div>
         </div>
-        
         <p>
             Begin by choosing a thought or feeling that you’d like to improve. This will be the starting point of your focus wheel.
             Type your starting thought in the first entry field to the right and press Enter. 
@@ -110,6 +108,13 @@
             As you complete each entry, it will be recorded in the focus flower to the left, helping you see your progression toward a more uplifting mindset.
             By the end, you’ll have created a series of thoughts that lead to a more empowered and positive perspective on your original thought. 
         </p>
+    </div>
+    <div id="confirmBox">
+        <p>Doing this will cause unsaved entries to be lost. Do you wish to continue?</p>
+        <div id="buttonContainer">
+            <button id="confirm">Confirm</button>
+            <button id="cancel">Cancel</button>
+        </div>
     </div>
 </body>
 </html>

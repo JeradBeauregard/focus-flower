@@ -18,11 +18,22 @@ function newFlower(){
     var createContainer = document.getElementById("createContainer");
     var mainContainer = document.getElementById("mainContainer");
     var createInput = formhandle0.input0.value;
+    var error = document.getElementById("input0Empty");
 
-    mainContainer.style.display = "flex";
-    createContainer.style.display = "none";
+    if(createInput == ""){
 
-    output0.innerHTML = createInput;
+        error.style.display = "inline";
+
+    }
+    else{
+        mainContainer.style.display = "flex";
+        createContainer.style.display = "none";
+    
+        output0.innerHTML = createInput;
+    
+        input1.focus();
+    }
+   
 
     return false;
 }
@@ -148,4 +159,163 @@ function processForm8(){
 
     return false
 }
+
+
+// menu functionality
+
+// clear 
+var clearButton = document.getElementById("clear");
+clearButton.onclick = clearFlowerConfirm;
+
+function clearFlowerConfirm(){
+
+    openConfirm();
+
+    var confirm = document.getElementById("confirm");
+    var cancel = document.getElementById("cancel");
+
+    confirm.onclick = function(){
+
+        closeConfirm();
+        clearFlower();
+
+    }
+
+    cancel.onclick = function(){ closeConfirm();}
 }
+
+
+
+function clearFlower(){
+
+    formhandle0.input0.value = "";
+    output0.innerHTML = "";
+
+    formhandle1.input1.value = "";
+    output1.innerHTML = "";
+
+    formhandle2.input2.value = "";
+    output2.innerHTML = "";
+    
+    formhandle3.input3.value = "";
+    output3.innerHTML = "";
+
+    formhandle4.input4.value = "";
+    output4.innerHTML = "";
+
+    formhandle5.input5.value = "";
+    output5.innerHTML = "";
+
+    formhandle6.input6.value = "";
+    output6.innerHTML = "";
+
+    formhandle7.input7.value = "";
+    output7.innerHTML = "";
+
+    formhandle8.input8.value = "";
+    output8.innerHTML = "";
+
+}
+
+// create
+
+var createButton = document.getElementById("create");
+
+createButton.onclick = createNewConfirm;
+
+function createNewConfirm(){
+
+        openConfirm();
+
+        var confirm = document.getElementById("confirm");
+        var cancel = document.getElementById("cancel");
+
+        confirm.onclick = function(){
+
+            closeConfirm();
+            createNew();
+
+        }
+
+        cancel.onclick = function(){ closeConfirm();}
+
+
+}
+
+function createNew(){
+
+    clearFlower();
+
+    var createContainer = document.getElementById("createContainer");
+    var mainContainer = document.getElementById("mainContainer");
+
+    mainContainer.style.display = "none";
+    createContainer.style.display = "flex";
+}
+
+// instructions
+
+var instructionButton = document.getElementById("instructions");
+var instructionPanel = document.getElementById("instructionPanel");
+
+
+var instructionCloseButton = document.getElementById("closeInstructions");
+instructionCloseButton.onclick = closeInstructions;
+
+var instructionStatus = false; // false is closed, true is open
+
+
+
+ instructionButton.onclick = instructionToggle;
+
+
+
+function openInstructions(){
+
+    instructionPanel.style.display = "flex";
+    
+    instructionStatus = true;
+    console.log(instructionStatus);
+}
+
+function closeInstructions(){
+
+    instructionPanel.style.display = "none";
+
+    instructionStatus = false;
+}
+
+function instructionToggle(){
+
+       if(instructionStatus){
+        closeInstructions();
+       } 
+       else{
+        openInstructions();
+       }
+
+}
+
+// confirm message function
+
+var confirmBox = document.getElementById("confirmBox");
+var confirmBoxStatus = false; // false is closed true is open
+
+
+
+function openConfirm(){
+
+confirmBox.style.display = "flex";  
+confirmBoxStatus = true;  
+
+}
+
+function closeConfirm(){
+
+   confirmBox.style.display = "none";
+    confirmBoxStatus = false;
+}
+
+
+}
+
