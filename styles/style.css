@@ -1,0 +1,476 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 25px;
+    gap: 25px;
+    background: #CADDE3;
+    font-family: Cagliostro, Arial, Helvetica, sans-serif;
+}
+
+#programContainer{
+    width: 1000px;
+    height: 650px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; 
+    padding-bottom: 15px; 
+
+    background: linear-gradient(180deg, #EBF4F6 0%, #FFF 100%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    width: 650px;
+    margin-top: 25px;
+}
+
+h1{
+
+    font-weight: 100;
+    font-size: 48px;
+    margin: 0;
+}
+
+h2{
+    margin: 0;
+}
+
+#logo{
+    width: 50px;
+    height: 50px;
+}
+
+#line{
+    width: 998px;
+    border: 1px solid #D9D9D9;
+    
+}
+
+#mainContainer{
+    display: none;
+    align-items: center;
+    width: 1000px;
+}
+
+#createContainer{
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#createContainer p{
+    margin: 0;
+}
+
+#createFlower{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+#createButton{
+    border: 0;
+    font-family: Cagliostro, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+
+#textContainer{
+    width: 475px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-left: 25px;
+    z-index: 2;
+}
+
+#flowerContainer{
+    width: 475px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-left: 25px;
+}
+
+#flowerCenter{
+    height: 150px;
+    width: 150px;
+    border-radius:  50%;
+    position: absolute;
+
+    background-color: #E5F4D6;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    
+    
+}
+
+#flowerPetal1{
+width: 125px;
+height: 125px;
+
+border-radius: 80% 15% 55% 50% / 55% 15% 80% 50%;
+position: absolute;
+top: 17%; left: 50%; transform: translate(-50%, -50%) rotate(135deg);
+
+background-color: #FAEC8F;
+box-shadow: -2px -2px 8px rgba(0, 0, 0, 0.25) inset;
+}
+
+#flowerPetal2{
+    width: 125px;
+    height: 125px;
+    
+    border-radius: 80% 15% 55% 50% / 55% 15% 80% 50%;
+    position: absolute;
+    top: 1%; left: 75%; transform: translate(-50%, -50%) rotate(42deg) rotate(135deg);
+    transform-origin: center bottom;
+
+    background-color: #FAEC8F;
+    box-shadow: -2px -2px 8px rgba(0, 0, 0, 0.25) inset;
+
+     
+}
+
+#flowerPetal3{
+    width: 125px;
+    height: 125px;
+    
+    border-radius: 80% 15% 55% 50% / 55% 15% 80% 50%;
+    position: absolute;
+    top: 50%; left: 85%; transform: translate(-50%, -50%) rotate(90deg) rotate(135deg);
+    
+    background-color: #FAEC8F;
+    box-shadow: -2px -2px 8px rgba(0, 0, 0, 0.25) inset;    
+}
+
+#flowerPetal4{
+    width: 125px;
+    height: 125px;
+    
+    border-radius: 80% 15% 55% 50% / 55% 15% 80% 50%;
+    position: absolute;
+    top: 75%; left: 75%; transform: translate(-50%, -50%) rotate(140deg) rotate(135deg);
+
+    background-color: #FAEC8F;
+    box-shadow: -2px -2px 8px rgba(0, 0, 0, 0.25) inset; 
+}
+
+#flowerPetal5{
+    width: 125px;
+    height: 125px;
+    
+    border-radius: 80% 15% 55% 50% / 55% 15% 80% 50%;
+    position: absolute;
+    top: 83%; left: 50%; transform: translate(-50%, -50%) rotate(180deg) rotate(135deg);
+
+    background-color: #FAEC8F;
+    box-shadow: -2px -2px 8px rgba(0, 0, 0, 0.25) inset; 
+}
+
+#flowerPetal6{
+    width: 125px;
+    height: 125px;
+    
+    border-radius: 80% 15% 55% 50% / 55% 15% 80% 50%;
+    position: absolute;
+    top: 75%; left: 25%; transform: translate(-50%, -50%) rotate(220deg) rotate(135deg);
+
+    background-color: #FAEC8F;
+    box-shadow: -2px -2px 8px rgba(0, 0, 0, 0.25) inset; 
+}
+
+#flowerPetal7{
+    width: 125px;
+    height: 125px;
+    
+    border-radius: 80% 15% 55% 50% / 55% 15% 80% 50%;
+    position: absolute;
+    top: 50%; left: 15%; transform: translate(-50%, -50%) rotate(270deg) rotate(135deg);
+
+    background-color: #FAEC8F;
+    box-shadow: -2px -2px 8px rgba(0, 0, 0, 0.25) inset; 
+}
+
+#flowerPetal8{
+    width: 125px;
+    height: 125px;
+    
+    border-radius: 80% 15% 55% 50% / 55% 15% 80% 50%;
+    position: absolute;
+    top: 25%; left: 25%; transform: translate(-50%, -50%) rotate(322deg) rotate(135deg);
+
+    background-color: #FAEC8F;
+    box-shadow: -2px -2px 8px rgba(0, 0, 0, 0.25) inset; 
+}
+
+#flowerCenterText{
+    
+    
+    width: 100px;
+    height: 100px;
+
+    font-size: 14px;
+    overflow-wrap: break-word;
+    text-align: center;
+    overflow: scroll;
+    
+    position: absolute;
+    
+    scrollbar-width: none;
+
+}
+
+#flowerPetal1Text{
+    
+    width: 80px;
+    height: 90px;
+    position: absolute;
+    top: 17%; left: 50%; transform: translate(-50%, -50%);
+
+    font-size: 14px;
+    overflow-wrap: break-word;
+    text-align: center;
+    overflow: scroll;
+    
+    scrollbar-width: none;
+}
+
+
+#flowerPetal2Text{
+    
+    width: 80px;
+    height: 80px;
+    
+    position: absolute;
+    top: 25%; left: 77%; transform: translate(-50%, -50%);
+
+    font-size: 14px;
+    overflow-wrap: break-word;
+    text-align: center;
+    overflow: scroll;
+    
+    scrollbar-width: none;
+}
+#flowerPetal3Text{
+    
+    width: 80px;
+    height: 85px;
+   
+    position: absolute;
+    top: 50%; left: 86%; transform: translate(-50%, -50%); 
+
+    font-size: 14px;
+    overflow-wrap: break-word;
+    text-align: center;
+    overflow: scroll;
+    
+    scrollbar-width: none;
+}
+#flowerPetal4Text{
+    
+    width: 80px;
+    height: 80px;
+    
+    position: absolute;
+    top: 76%; left: 75.5%; transform: translate(-50%, -50%); 
+
+    font-size: 14px;
+    overflow-wrap: break-word;
+    text-align: center;
+    overflow: scroll;
+    
+    scrollbar-width: none;
+}
+#flowerPetal5Text{
+   
+    width: 80px;
+    height: 90px;
+    
+    position: absolute;
+    top: 83%; left: 50%; transform: translate(-50%, -50%);
+
+    font-size: 14px;
+    overflow-wrap: break-word;
+    text-align: center;
+    overflow: scroll;
+    
+    scrollbar-width: none;
+}
+#flowerPetal6Text{
+    
+    width: 80px;
+    height: 80px;
+   
+    position: absolute;
+    top: 76%; left: 24%; transform: translate(-50%, -50%);
+
+    font-size: 14px;
+    overflow-wrap: break-word;
+    text-align: center;
+    overflow: scroll;
+    
+    scrollbar-width: none;
+}
+#flowerPetal7Text{
+    
+    width: 80px;
+    height: 85px;
+  
+    position: absolute;
+    top: 50%; left: 13.5%; transform: translate(-50%, -50%); 
+
+    font-size: 14px;
+    overflow-wrap: break-word;
+    text-align: center;
+    overflow: scroll;
+    
+    scrollbar-width: none;
+}
+#flowerPetal8Text{
+    
+    width: 80px;
+    height: 80px;
+    
+    position: absolute;
+    top: 25%; left: 25%; transform: translate(-50%, -50%); 
+
+    font-size: 14px;
+    overflow-wrap: break-word;
+    text-align: center;
+    overflow: scroll;
+    
+    scrollbar-width: none;
+}
+
+#flowerCenterText::-webkit-scrollbar {
+    display: none; 
+
+}
+#flowerPetal1Text::-webkit-scrollbar {
+    display: none; 
+
+}
+#flowerPetal2Text::-webkit-scrollbar {
+    display: none; 
+
+}
+#flowerPetal3Text::-webkit-scrollbar {
+    display: none; 
+
+}
+#flowerPetal4Text::-webkit-scrollbar {
+    display: none; 
+
+}
+#flowerPetal5Text::-webkit-scrollbar {
+    display: none; 
+
+}
+#flowerPetal6Text::-webkit-scrollbar {
+    display: none; 
+
+}
+#flowerPetal7Text::-webkit-scrollbar {
+    display: none; 
+
+}
+#flowerPetal8Text::-webkit-scrollbar {
+    display: none; 
+
+}
+
+
+
+#inputContainer{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.input{
+    width: 300px;
+    height: 40px;
+    border: none;
+    border-radius: 15px;
+    
+    background: #CADDE3;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    
+    
+}
+
+.hiddenButton{
+    display: none;
+}
+
+#navContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 450px;
+    gap: 15px;
+}
+
+.navIcon{
+    width: 65px;
+    height: 65px;
+    
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+
+    background-color: #CADDE3;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.navIcon:hover{
+    background-color:  #FAEC8F;
+}
+
+#instructionPanel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    width: 300px;
+    border-radius: 25px;
+    border: 1px solid black;
+    padding: 30px;
+}
+
+#instructionHeader{
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
