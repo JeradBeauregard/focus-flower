@@ -203,9 +203,6 @@ function clearFlowerConfirm(){
 
 function clearFlower(){
 
-    formhandle0.input0.value = "";
-    output0.innerHTML = "";
-
     formhandle1.input1.value = "";
     output1.innerHTML = "";
 
@@ -264,6 +261,9 @@ function createNewConfirm(){
 function createNew(){
 
     clearFlower();
+
+    formhandle0.input0.value = "";
+    output0.innerHTML = "";
 
     var createContainer = document.getElementById("createContainer");
     var mainContainer = document.getElementById("mainContainer");
