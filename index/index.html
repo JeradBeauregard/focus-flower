@@ -15,7 +15,7 @@
     <div id="programContainer">
         <header id="header"><h1>Focus Flower</h1><div id="logo"></div><h2>Growing better beliefs</h2></header>
         <div id="line"></div>
-        <section id="createContainer"> <!-- create page-->
+        <section id="createContainer" class="createContainer"> <!-- create page-->
             <h3>Instructions</h3>
             <p> Begin by choosing a thought or feeling that you’d like to improve. This will be the starting point of your focus wheel.
                 Type your starting thought in the first entry field to the right and press Enter. 
@@ -27,11 +27,11 @@
             <h3>Welcome to focus flower. Please enter your starting thought below.</h3>
             <form name="createFlower" id="createFlower">
                 <input name="input0" id="input0" class="input">
-                <p id="input0Empty">Input cannot be empty. Please enter your starting thought.</p>
+                <p id = "input0Empty"class="input0EmptyHidden">Input cannot be empty. Please enter your starting thought.</p>
                 <button type="submit" id="createButton" class="navIcon">Begin</button>
             </form>
         </section>
-        <main id="mainContainer">
+        <main id="mainContainer" class="mainContainerHidden">
         <section id="flowerContainer"> <!-- holds flower-->
             <div id="flowerCenter"></div>
             <div id="flowerPetal1"></div>
@@ -96,7 +96,7 @@
         </div>
         </main>
     </div>
-    <div id="instructionPanel"> <!-- holds instructions -->
+    <div id="instructionPanel" class="instructionPanelHidden"> <!-- holds instructions -->
         <div id="instructionHeader">
             <h3>Instructions</h3>
             <div id="closeInstructions">Close</div>
@@ -110,7 +110,7 @@
             By the end, you’ll have created a series of thoughts that lead to a more empowered and positive perspective on your original thought. 
         </p>
     </div>
-    <div id="confirmBox"> <!-- holds confirm message -->
+    <div id="confirmBox" class = "confirmBoxHidden"> <!-- holds confirm message -->
         <p>Doing this will cause unsaved entries to be lost. Do you wish to continue?</p>
         <div id="buttonContainer">
             <button id="confirm">Confirm</button>

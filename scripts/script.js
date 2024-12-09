@@ -15,17 +15,21 @@ function newFlower(){
     var mainContainer = document.getElementById("mainContainer");
     var createInput = formhandle0.input0.value;
     var error = document.getElementById("input0Empty");
+    error.className = "input0EmptyHidden";
 
     if(createInput == ""){
 
-        error.style.display = "inline";
+        error.className = "input0Empty";
 
     }
     else{
-        mainContainer.style.display = "flex";
-        createContainer.style.display = "none";
+        mainContainer.className = "mainContainer";
+        createContainer.className = "createContainerHidden";
     
         output0.innerHTML = createInput;
+
+        // disables inputs until previous input is used
+        disableInputs();
     
         input1.focus();
     }
@@ -71,15 +75,7 @@ formhandle6.onsubmit = processForm6;
 formhandle7.onsubmit = processForm7;
 formhandle8.onsubmit = processForm8;
 
-// disables inputs until previous input is used
 
-formhandle2.input2.disabled = true;
-formhandle3.input3.disabled = true;
-formhandle4.input4.disabled = true;
-formhandle5.input5.disabled = true;
-formhandle6.input6.disabled = true;
-formhandle7.input7.disabled = true;
-formhandle8.input8.disabled = true;
 
 // form process,  functions add relevant inputs to the flower
 
@@ -228,6 +224,9 @@ function clearFlower(){
     output8.innerHTML = "";
 
     clearButton.className = "navIcon";
+
+    disableInputs();
+    input1.focus();
 }
 
 // create
@@ -268,8 +267,8 @@ function createNew(){
     var createContainer = document.getElementById("createContainer");
     var mainContainer = document.getElementById("mainContainer");
 
-    mainContainer.style.display = "none";
-    createContainer.style.display = "flex";
+    mainContainer.className = "mainContainerHidden";
+    createContainer.className = "createContainer";
 }
 
 // instructions
@@ -291,8 +290,8 @@ var instructionStatus = false; // false is closed, true is open
 // open function
 function openInstructions(){
     closeConfirm();
-    instructionPanel.style.display = "flex";
-    instructionButton.classList = "navSelected";
+    instructionPanel.className = "instructionPanel";
+    instructionButton.className = "navSelected";
     
     instructionStatus = true;
     console.log(instructionStatus);
@@ -300,8 +299,8 @@ function openInstructions(){
 // close function
 function closeInstructions(){
 
-    instructionPanel.style.display = "none";
-    instructionButton.classList = "navIcon";
+    instructionPanel.className ="instructionPanelHidden"
+    instructionButton.className = "navIcon";
     instructionStatus = false;
 }
 // function handles open/close functions
@@ -325,7 +324,7 @@ var confirmBoxStatus = false; // false is closed true is open
 
 function openConfirm(){
 
-confirmBox.style.display = "flex";  
+confirmBox.className = "confirmBox"; 
 confirmBoxStatus = true;  
 
 }
@@ -333,10 +332,23 @@ confirmBoxStatus = true;
 // close function
 function closeConfirm(){
 
-   confirmBox.style.display = "none";
+   confirmBox.className = "confirmBoxHidden";
     confirmBoxStatus = false;
     clearButton.className = "navIcon";
     createButton.className = "navIcon";
+}
+
+function disableInputs(){
+
+      // disables inputs until previous input is used
+
+      formhandle2.input2.disabled = true;
+      formhandle3.input3.disabled = true;
+      formhandle4.input4.disabled = true;
+      formhandle5.input5.disabled = true;
+      formhandle6.input6.disabled = true;
+      formhandle7.input7.disabled = true;
+      formhandle8.input8.disabled = true;
 }
 
 

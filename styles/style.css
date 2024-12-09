@@ -64,14 +64,20 @@ h2{
 }
 
 /* main content alignment */
-#mainContainer{
-    display: none;
+.mainContainer{
+    display: flex;
     align-items: center;
     width: 1000px;
 }
 
+.mainContainerHidden{
+    display: none;
+   
+}
+
+
 /* create page alignment */
-#createContainer{
+.createContainer{
     width: 800px;
     display: flex;
     flex-direction: column;
@@ -80,9 +86,15 @@ h2{
     gap: 15px;
 }
 
+.createContainerHidden{
+    display: none;
+  
+}
+
 /* aligning paragraph in create page */
 #createContainer p{
     margin: 0;
+    text-align: center;
 }
 
 /* create page input alignment */
@@ -498,8 +510,8 @@ a{
     background-color:  #FAEC8F;
 }
 /* container for in application instructions  */
-#instructionPanel{
-    display: none;
+.instructionPanel{
+    display: flex;
     flex-direction: column;
     align-items: center;
     height: 400px;
@@ -513,6 +525,11 @@ a{
     background: linear-gradient(180deg, #EBF4F6 0%, #FFF 100%);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     
+}
+
+.instructionPanelHidden{
+    display: none;
+
 }
 /* alignment for instruction header and close button */
 #instructionHeader{
@@ -529,8 +546,8 @@ a{
 
 }
 /* confirm box container for alignment */
-#confirmBox{
-    display: none;
+.confirmBox{
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -546,6 +563,10 @@ a{
     background: linear-gradient(180deg, #EBF4F6 0%, #FFF 100%);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
+}
+
+.confirmBoxHidden{
+    display: none;
 }
 /* container to align buttons */
 #buttonContainer{
@@ -584,8 +605,14 @@ a{
 }
 
 /* create page error message handling */
-#input0Empty{
+.input0Empty{
+
+    display: inline;
+    color: red;
+}
+
+.input0EmptyHidden{
 
     display: none;
-    color: red;
+    
 }
